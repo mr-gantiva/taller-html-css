@@ -1,0 +1,53 @@
+body {
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .padre {
+        display: flex;
+        margin: 0 auto;
+        width: 400px;
+        height: 400px;
+        background-color: #333;
+        border-radius: 16px;
+
+        &:hover .hijo {
+            transform: translateX(100%);
+            background-color: darkslategray;
+        }
+
+        .hijo {
+            width: 50%;
+            height: 50%;
+            background-color: rgba(190, 190, 190, 0.46);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(6.6px);
+            -webkit-backdrop-filter: blur(6.6px);
+            border: 1px solid rgba(190, 190, 190, 0.3);
+            ;
+            transition: transform 1s ease-in 0.1s;
+            /*cubic-bezier(0, 2.65, 1,-0.28)*/
+        }
+    }
+
+    .padre1 {
+        @extend .padre;
+        &:hover .hijo{
+            animation: traslacion 1s;
+        }
+        .hijo1 {
+            @extend .hijo;
+        }
+    }
+}
+
+@keyframes traslacion {
+    0% {
+        background-color: goldenrod;
+    }
+    100% {
+        background-color: darkslategray;
+    }
+}
