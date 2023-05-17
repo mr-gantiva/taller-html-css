@@ -1,20 +1,22 @@
-body h1 {
+body h2 {
   text-align: center;
   text-transform: uppercase;
 }
-body .padre, body .padre1 {
+body .padre {
   display: flex;
   margin: 0 auto;
   width: 400px;
   height: 400px;
   background-color: #333;
   border-radius: 16px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
-body .padre:hover .hijo, body .padre:hover .padre1 .hijo1, body .padre1 .padre:hover .hijo1, body .padre1:hover .hijo, body .padre1:hover .hijo1 {
+body .padre:hover .hijo {
   transform: translateX(100%);
   background-color: darkslategray;
 }
-body .padre .hijo, body .padre1 .hijo, body .padre1 .hijo1 {
+body .padre .hijo {
   width: 50%;
   height: 50%;
   background-color: rgba(190, 190, 190, 0.46);
@@ -26,14 +28,51 @@ body .padre .hijo, body .padre1 .hijo, body .padre1 .hijo1 {
   transition: transform 1s ease-in 0.1s;
   /*cubic-bezier(0, 2.65, 1,-0.28)*/
 }
-body .padre1:hover .hijo, body .padre1:hover .hijo1 {
-  animation: traslacion 1s;
+body .padre1 {
+  display: flex;
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  background-color: #333;
+  border-radius: 16px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
+body .padre1:hover .hijo1 {
+  animation-play-state: paused;
+}
+body .padre1 .hijo1 {
+  width: 50%;
+  height: 50%;
+  background-color: rgba(190, 190, 190, 0.46);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+  border: 1px solid rgba(190, 190, 190, 0.3);
+  animation: traslacion 2s ease-in-out infinite forwards;
+  transition: transform 1s ease-in 0.1s;
+}
+
 @keyframes traslacion {
   0% {
-    background-color: goldenrod;
+    background-color: darkslategray;
+    transform: translateX(0%) translateY(0%);
+  }
+  25% {
+    background-color: blue;
+    transform: translateX(100%) translateY(0%);
+  }
+  50% {
+    background-color: red;
+    transform: translateX(100%) translateY(100%);
+  }
+  75% {
+    background-color: #fafaf5;
+    transform: translateX(0%) translateY(100%);
   }
   100% {
-    background-color: darkslategray;
+    background-color: goldenrod;
+    transform: translateX(0%) translateY(0%);
   }
 }/*# sourceMappingURL=main.css.map */
