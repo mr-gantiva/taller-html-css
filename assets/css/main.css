@@ -7,6 +7,7 @@
 body {
   font-family: "IBM Plex Sans", sans-serif;
   margin: 80px auto;
+  background: rgb(28, 28, 61);
 }
 body .titulo {
   width: 100%;
@@ -37,7 +38,7 @@ body .padre {
   margin: 0 auto;
   width: 400px;
   height: 400px;
-  background-color: #333;
+  background-color: #fafaf5;
   border-radius: 16px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -63,7 +64,7 @@ body .padre1 {
   margin: 0 auto;
   width: 400px;
   height: 400px;
-  background-color: #333;
+  background-color: #fafaf5;
   border-radius: 16px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -175,10 +176,12 @@ body .escenario-2-em-rem {
 body .escenario-1-em-rem .em,
 body .escenario-2-em-rem .em {
   font-size: 2em;
+  color: #fafaf5;
 }
 body .escenario-1-em-rem .rem,
 body .escenario-2-em-rem .rem {
   font-size: 2rem;
+  color: #fafaf5;
 }
 
 @keyframes traslacion {

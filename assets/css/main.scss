@@ -6,6 +6,7 @@
 body {
     font-family: 'IBM Plex Sans', sans-serif;
     margin: 80px auto;
+    background: rgb(28, 28, 61);
     .titulo {
         width: 100%;
         display: flex;
@@ -37,7 +38,7 @@ body {
         margin: 0 auto;
         width: 400px;
         height: 400px;
-        background-color: #333;
+        background-color: #fafaf5;
         border-radius: 16px;
         margin-top: 40px;
         margin-bottom: 40px;
@@ -67,7 +68,7 @@ body {
         margin: 0 auto;
         width: 400px;
         height: 400px;
-        background-color: #333;
+        background-color: #fafaf5;
         border-radius: 16px;
         margin-top: 40px;
         margin-bottom: 40px;
@@ -147,6 +148,7 @@ body {
         margin: 10px 0px;
         border: 1px solid #ccc;
         padding: 10px;
+
         .px {
             background-color: #0a99ec;
             width: 200px;
@@ -177,9 +179,11 @@ body {
         @extend .escenario;
         .em {
             font-size: 2em;
+            color: #fafaf5;
         }
         .rem {
             font-size: 2rem;
+            color: #fafaf5;
         }
     }
 
